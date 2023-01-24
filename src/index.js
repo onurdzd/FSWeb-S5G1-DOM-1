@@ -60,21 +60,26 @@ for (let i = 0; i < headerNav.length; i++) {
   headerNav[i].textContent = Object.values(siteContent.nav)[i];
 }
 
-document.querySelectorAll(".top-content h4")[0].textContent = "Özellikler";
-document.querySelectorAll(".top-content h4")[1].textContent = "Hakkında";
-document.querySelectorAll(".bottom-content h4")[0].textContent = "Servisler";
-document.querySelectorAll(".bottom-content h4")[1].textContent = "Ürünler";
-document.querySelectorAll(".bottom-content h4")[2].textContent = "Vizyon";
+document.querySelectorAll(".top-content h4")[0].textContent =
+  siteContent["ana-içerik"]["özellikler-h4"];
+document.querySelectorAll(".top-content h4")[1].textContent =
+  siteContent["ana-içerik"]["hakkımızda-h4"];
+document.querySelectorAll(".bottom-content h4")[0].textContent =
+  siteContent["ana-içerik"]["servisler-h4"];
+document.querySelectorAll(".bottom-content h4")[1].textContent =
+  siteContent["ana-içerik"]["ürünler-h4"];
+document.querySelectorAll(".bottom-content h4")[2].textContent =
+  siteContent["ana-içerik"]["vizyon-h4"];
 document.querySelectorAll(".top-content p")[0].textContent =
-  "Özellikler içeriği elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+  siteContent["ana-içerik"]["özellikler-içerik"];
 document.querySelectorAll(".top-content p")[1].textContent =
-  "Hakkında içeriği elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+  siteContent["ana-içerik"]["hakkımızda-içerik"];
 document.querySelectorAll(".bottom-content p")[0].textContent =
-  "Servisler içeriği elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+  siteContent["ana-içerik"]["servisler-içeriği"];
 document.querySelectorAll(".bottom-content p")[1].textContent =
-  "Ürünler içeriği elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+  siteContent["ana-içerik"]["ürünler-içeriği"];
 document.querySelectorAll(".bottom-content p")[2].textContent =
-  "Vizyon içeriği elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+  siteContent["ana-içerik"]["vizyon-içeriği"];
 
 document.querySelector(".contact h4").textContent =
   siteContent.iletisim["iletişim-h4"];
@@ -89,12 +94,11 @@ document.querySelectorAll(".contact p")[2].textContent =
 document.querySelector("footer a").textContent =
   siteContent.footer["copyright"];
 
-document.querySelector("header img").src = "http://localhost:9000/img/logo.png";
+document.querySelector("header img").src = siteContent.images["logo-img"];
 
-document.querySelector(".cta img").src = "http://localhost:9000/img/cta.png";
+document.querySelector(".cta img").src = siteContent.images["cta-img"];
 
-document.querySelector(".middle-img").src =
-  "http://localhost:9000/img/accent.png";
+document.querySelector(".middle-img").src = siteContent.images["accent-img"];
 
 let headerNavSolo = document.querySelectorAll("header nav a");
 
@@ -104,3 +108,5 @@ for (let i = 0; i < headerNavSolo.length; i++) {
 
 let footerNav = document.querySelector("footer a");
 footerNav.classList.add("bold");
+
+console.log("aa");
